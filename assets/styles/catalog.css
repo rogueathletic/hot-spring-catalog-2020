@@ -1,0 +1,395 @@
+body {
+	overflow: hidden;
+	background-color: #fcfcfc;
+	margin: 0;
+	padding: 0;
+}
+
+.caldera-main-logo {
+	height: 60px;
+	margin: 1vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+	-webkit-animation: 2000ms linear arrowsIn forwards;
+	animation: 2000ms linear arrowsIn forwards;
+	-webkit-animation-delay: 1000ms;
+	animation-delay: 1000ms;
+}
+
+@media only screen and (max-width: 767px) and (orientation: landscape) {
+	.caldera-main-logo {
+		display: none;
+	}
+	body {
+		margin-top: 40px;
+	}
+}
+
+
+.catalog-viewport .container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 922px;
+	height: 600px;
+	margin: auto;
+}
+
+.catalog-viewport .catalog {
+	width: 922px;
+	height: 600px;
+	left: -461px;
+	top: -300px;
+}
+
+.catalog-viewport .page {
+	width: 461px;
+	height: 600px;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+
+.catalog-viewport .zoomer .region {
+	display: none;
+}
+
+.catalog .region {
+	position: absolute;
+	overflow: hidden;
+	background: #0066FF;
+	opacity: 0.2;
+	border-radius: 10px;
+	cursor: pointer;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+	filter: alpha(opacity=20);
+}
+
+.catalog .region:hover {
+	opacity: 0.5;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+}
+
+.catalog .region.zoom {
+	opacity: 0.01;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+	filter: alpha(opacity=1);
+}
+
+.catalog .region.zoom:hover {
+	opacity: 0.2;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+	filter: alpha(opacity=20);
+}
+
+.catalog .page {
+	-ms-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	-o-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.catalog-viewport .page img {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	margin: 0;
+}
+
+.catalog .even .gradient {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-gradient(linear, left top, right top, color-stop(0.95, rgba(0, 0, 0, 0)), color-stop(1, rgba(0, 0, 0, 0.2)));
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(95%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2)));
+	background-image: linear-gradient(left, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.2) 100%);
+}
+
+.catalog .odd .gradient {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-gradient(linear, right top, left top, color-stop(0.95, rgba(0, 0, 0, 0)), color-stop(1, rgba(0, 0, 0, 0.15)));
+	background-image: -webkit-gradient(linear, right top, left top, color-stop(95%, rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.15)));
+	background-image: linear-gradient(right, rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0.15) 100%);
+}
+
+.catalog-viewport .zoom-in .even .gradient,
+.catalog-viewport .zoom-in .odd .gradient {
+
+	display: none;
+
+}
+
+.catalog-viewport .loader {
+	background-image: url(../pics/loader.gif);
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	top: 280px;
+	left: 219px;
+}
+
+.catalog-viewport .shadow {
+
+	-o-box-shadow: 0 0 20px #ccc;
+	-ms-box-shadow: 0 0 20px #ccc;
+	box-shadow: 0 0 20px #ccc;
+	-webkit-transition: 0.5;
+	-moz-transition: 0.5;
+	-ms-transition: 0.5;
+	-o-transition: 0.5;
+	transition: 0.5;
+}
+
+.catalog-viewport .next-button,
+.catalog-viewport .previous-button {
+	width: 22px;
+	height: 600px;
+	position: absolute;
+	top: 0;
+}
+
+.catalog-viewport .next-button {
+	right: -22px;
+	border-radius: 0 15px 15px 0;
+	background-image: url(../pics/arrows-dark-teal.svg);
+	background-position: -38px 284px;
+	background-repeat: no-repeat;
+	-webkit-animation: 2000ms linear arrowsIn forwards;
+	animation: 2000ms linear arrowsIn forwards;
+	-webkit-animation-delay: 1000ms;
+	animation-delay: 1000ms;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+
+.catalog-viewport .previous-button {
+	left: -22px;
+	border-radius: 15px 0 0 15px;
+	background-image: url(../pics/arrows-dark-teal.svg);
+	background-position: -4px 284px;
+	background-repeat: no-repeat;
+	-webkit-animation: 2000ms linear arrowsIn forwards;
+	animation: 2000ms linear arrowsIn forwards;
+	-webkit-animation-delay: 1000ms;
+	animation-delay: 1000ms;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	-moz-opacity: 0;
+	-khtml-opacity: 0;
+	opacity: 0;
+}
+
+.catalog-viewport .previous-button-hover,
+.catalog-viewport .next-button-hover {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.catalog-viewport .previous-button-hover,
+.catalog-viewport .previous-button-down {
+	background-image: url(../pics/arrows-lite-teal.svg);
+	background-position: -4px 284px;
+	background-repeat: no-repeat;
+}
+
+.catalog-viewport .previous-button-down,
+.catalog-viewport .next-button-down {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.catalog-viewport .next-button-hover,
+.catalog-viewport .next-button-down {
+	background-image: url(../pics/arrows-lite-teal.svg);
+	background-position: -38px 284px;
+	background-repeat: no-repeat;
+}
+
+.catalog-viewport .zoom-in .next-button,
+.catalog-viewport .zoom-in .previous-button {
+	display: none;
+}
+
+.animated {
+	-webkit-transition: margin-left 0.5s;
+	transition: margin-left 0.5s;
+}
+
+.thumbnails {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 140px;
+	z-index: 1;
+}
+
+.thumbnails>div {
+	width: 1050px;
+	height: 100px;
+	margin: 20px auto;
+}
+
+.thumbnails ul {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	-webkit-transform: scale3d(0.5, 0.5, 1);
+	transform: scale3d(0.5, 0.5, 1);
+	-webkit-transition: -webkit-transform ease-in-out 100ms;
+	transition: -webkit-transform ease-in-out 100ms;
+	transition: transform ease-in-out 100ms;
+	transition: transform ease-in-out 100ms, -webkit-transform ease-in-out 100ms;
+}
+
+.thumbanils-touch ul {
+	-webkit-transform: none;
+	transform: none;
+}
+
+.thumbnails-hover ul {
+	-webkit-transform: scale3d(0.6, 0.6, 1);
+	transform: scale3d(0.6, 0.6, 1);
+}
+
+.thumbnails li {
+	list-style: none;
+	display: inline-block;
+	margin: 0 5px;
+	-ms-box-shadow: 0 0 10px #ccc;
+	-o-box-shadow: 0 0 10px #ccc;
+	box-shadow: 0 0 10px #ccc;
+	-webkit-transition: -webkit-transform 60ms;
+	transition: -webkit-transform 60ms;
+}
+
+.thumbnails li span {
+	display: none;
+}
+
+.thumbnails .current {
+	-ms-box-shadow: 0 0 10px red;
+	-o-box-shadow: 0 0 10px red;
+	box-shadow: 0 0 10px red;
+}
+
+.thumbnails .thumb-hover {
+	-webkit-transform: scale3d(1.3, 1.3, 1);
+	transform: scale3d(1.3, 1.3, 1);
+	-ms-box-shadow: 0 0 10px #666;
+	-o-box-shadow: 0 0 10px #666;
+	box-shadow: 0 0 10px #666;
+}
+
+.thumbanils-touch .thumb-hover {
+	-webkit-transform: none;
+	transform: none;
+}
+
+.thumbnails .thumb-hover span {
+	position: absolute;
+	bottom: -30px;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	height: 30px;
+	font: bold 15px arial;
+	line-height: 30px;
+	color: #666;
+	display: block;
+	cursor: default;
+}
+
+.thumbnails img {
+	float: left;
+}
+
+.exit-message {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	z-index: 10000;
+}
+
+.exit-message>div {
+	width: 140px;
+	height: 30px;
+	margin: auto;
+	background: rgba(0, 0, 0, 0.5);
+	text-align: center;
+	font: 12px arial;
+	line-height: 30px;
+	color: white;
+	border-radius: 10px;
+}
+
+.zoom-icon {
+	position: absolute;
+	z-index: 1000;
+	width: 22px;
+	height: 22px;
+	top: 10px;
+	right: 10px;
+	background-image: url(../pics/zoom-icons.png);
+	background-size: 88px 22px;
+}
+
+.zoom-icon-in {
+	background-position: 0 0;
+	cursor: pointer;
+}
+
+.zoom-icon-in.zoom-icon-in-hover {
+	background-position: -22px 0;
+	cursor: pointer;
+}
+
+.zoom-icon-out {
+	background-position: -44px 0;
+}
+
+.zoom-icon-out.zoom-icon-out-hover {
+	background-position: -66px 0;
+	cursor: pointer;
+}
+
+.bottom {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+@keyframes arrowsIn {
+	0% {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		filter: alpha(opacity=0);
+		-moz-opacity: 0;
+		-khtml-opacity: 0;
+		opacity: 0;
+	}
+	100% {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+		filter: alpha(opacity=1);
+		-moz-opacity: 1;
+		-khtml-opacity: 1;
+		opacity: 1;
+	}
+}
